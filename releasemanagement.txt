@@ -1,0 +1,27 @@
+ralphlauren@o9solutions.com, Ralph Lauren Customer Success <ralph-lauren-customer-success@o9solutions.com>
+
+Downtime Request - Changing system temp files path for the LS Box - Biglots Preprod
+
+VOtmmAzTyvN@p}x
+
+Hello Team,
+
+As we are in a process of changing the path of system temp for the LS box which is basically  pointed to c drive. Whenever we are performing operations like taking backup, FTBR's etc. It is  downloading temp files to the drives whichever we have configured in the system temp ( c drive), which won't have sufficient space to download the files and eventually the operation will fail. Due to this we are pointing the system temp files path to a higher disk so that it will have sufficient space to download the data. After changing the path, we would be restarting the install agent which will cause issues, if in case any restorations are going on.  Hence, we would recommend not to perform any operations as such during the downtime window.  For this process we would require a 1 hour of downtime during weekdays. Kindly let us know.
+
+
+Env - 
+LS Box IP - 
+
+
+@all purpose of this channel is to provide all following details by upgrade assignee, 
+1. Provide update in every hour here and communicate over Email as well  to the Project team.
+2. Provide steps here which has been executed manually
+3. If any issue occur raise a Zendesk ticket upload all logs into it and post that issue details here
+4. Make sure to raise issue immediately and seek for help. List down what all steps have been taken care to fix the issue. If you are not aware of, let the person provide all details immediately and post details here.
+5. Check all job run status properly and raise if there is any failure.
+6. Try to finish upgrade within time.
+
+delete LSSystemSettings where SettingKey ='ConfigGitPersonalAccessToken'
+update DefaultSystemSettings set SettingValue = 'stgdatagitpats' where settingkey = 'GitPatso9AzureAccountName'
+update DefaultSystemSettings set SettingValue = 'GYZjHIxtB7RZx2qgxanZpzG3AHZFmDpQQT6Ibk8VEWuzOFtzVt6GiWHkHSeduWhDZFn0yzKdEGVX+AStpVaTXg==' where settingkey = 'GitPatso9AzureKeyValue'
+
