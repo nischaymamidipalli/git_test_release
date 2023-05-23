@@ -1,8 +1,5 @@
 # git_test_release
-for testing automation in github
-
-
-Project monthly release cut automation:
+for testing automation in github:-Project monthly release cut automation:
 1)In jenkins: Disable azuremonthlybranch job
 
 2)Manual steps for one repo:
